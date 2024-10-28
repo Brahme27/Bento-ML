@@ -1,0 +1,18 @@
+service: "service.py:svc"
+labels :
+  owner : "brahme"
+  projects : "gallery"
+
+include :
+- "*.py"
+python:
+  packages:
+     - scikit-learn
+     - pandas
+
+#Successfully built Bento(tag="iris_classifier:4qrfhxmvewaalaco").
+#Possible next steps:
+#Containerize your Bento with `bentoml containerize`:
+#$ bentoml containerize iris_classifier:4qrfhxmvewaalaco  [or bentoml build --containerize]
+#Push to BentoCloud with `bentoml push`:
+#bentoml push iris_classifier:4qrfhxmvewaalaco [or bentoml build --push]
